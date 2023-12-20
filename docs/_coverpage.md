@@ -12,4 +12,4 @@
 - 自动转换
 
 [GitHub](https://github.com/cpfe/cpfe.github.io.git)
-[Get Started](readme)
+[Get Started](README)
