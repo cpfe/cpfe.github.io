@@ -7,6 +7,8 @@
     <meta name="description" content="Description"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"/>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+	<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <style type="text/css">
         .sidebar-nav > ul > li.file p > a {
             font-size: 15px;
@@ -24,6 +26,8 @@
     加载中
 </div>
 <script>
+	var num = 0;
+	mermaid.initialize({ startOnLoad: false });
     window.$docsify = {
         name: '文档',
         repo: '',
@@ -56,7 +60,19 @@
             hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
             namespace: 'website-1',
             pathNamespaces: ['/', '/config', '/guide']
-        }
+        },
+		  markdown: {
+			renderer: {
+			  code: function(code, lang) {
+				if (lang === "mermaid") {
+				  return (
+					'<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+				  );
+				}
+				return this.origin.code.apply(this, arguments);
+			  }
+			}
+		  }
     }
 </script>
 <!-- Docsify v4 -->
@@ -79,6 +95,7 @@
 <script src="//unpkg.com/prismjs@1.27.0/components/prism-sql.min.js"></script>
 <script src="//unpkg.com/prismjs@1.27.0/components/prism-xml-doc.min.js"></script>
 <script src="//unpkg.com/prismjs@1.27.0/components/prism-yaml.min.js"></script>
+
 
 
 </body>
