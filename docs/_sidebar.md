@@ -12,6 +12,10 @@
 	* [命令1](command/command1)
 	* [命令2](command/command2)
 	* [命令3](command/command3)
+	
+* 文章摘抄
+	* [SnowFlake雪花算法生成分布式ID](article/SnowFlake雪花算法生成分布式ID)
+	
 
 * python笔记
 	* [python基础知识](python/python基础知识 "python基础")
