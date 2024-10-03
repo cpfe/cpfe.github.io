@@ -21,6 +21,11 @@
 	* [MYSQL-事务和锁的面纱](article/MYSQL-事务和锁的面纱)
 	* [MYSQL地基基础-数据字典](article/MYSQL地基基础-数据字典)
 	* [彻底理解MySQL的索引机制](article/彻底理解MySQL的索引机制)
+	* [不可不说的java锁事](article/不可不说的java锁事)
+	* [面试最常被问的java后端题](article/面试最常被问的java后端题)
+	* [116道redis面试题](article/116道redis面试题)
+	* [分布式一致性理论与算法](article/分布式一致性理论与算法)
+	* [全面了解JDK线程池实现原理](article/全面了解JDK线程池实现原理)
 	
 
 * python笔记
